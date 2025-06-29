@@ -11,7 +11,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)) // Exemplo de alias comum e útil
+            '@': fileURLToPath(new URL('./src', import.meta.url))
         }
     },
     server: {

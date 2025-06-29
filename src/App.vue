@@ -1,11 +1,9 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-
+  <div class="card">
+    <MenuBar />
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<script setup>
+import MenuBar from './components/MenuBar.vue';
+</script>
