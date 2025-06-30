@@ -4,6 +4,9 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const items = ref([
   {
@@ -33,11 +36,12 @@ const items = ref([
           {
             label: 'Ativos',
             icon: 'pi pi-check',
-            to: '/funcionarios-ativos'
+            command: () => router.push('/funcionarios-ativos')
           },
           {
             label: 'Intivos',
             icon: 'pi pi-times',
+            command: () => router.push('/funcionarios-inativos')
           },
           {
             label: 'Cpf',
@@ -53,6 +57,7 @@ const items = ref([
           },
           {
             label: 'Especialidade',
+            icon: 'pi pi-briefcase',
             to: '/consulta-funcionarios-ativos'
           }
         ]

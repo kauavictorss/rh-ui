@@ -3,6 +3,7 @@ import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 import 'primeicons/primeicons.css';
 import App from "@/App.vue";
+import router from './router';
 
 import Menubar from 'primevue/menubar';
 import DataTable from 'primevue/datatable';
@@ -15,6 +16,7 @@ app.use(PrimeVue, {
     }
 });
 app.component('Menubar', Menubar);
-app.mount('#app');
 app.component(DataTable.name, DataTable);
 app.component(Column.name, Column);
+app.use(router);
+app.mount('#app');
